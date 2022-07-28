@@ -188,6 +188,8 @@ const BridgeLabel = ({ chainId }: { chainId: SupportedChainId }) => {
     case SupportedChainId.POLYGON:
     case SupportedChainId.POLYGON_MUMBAI:
       return <Trans>Polygon Bridge</Trans>
+    case SupportedChainId.BUILDBEAR:
+      return <Trans>Buildbear Bridge</Trans>
     case SupportedChainId.CELO:
     case SupportedChainId.CELO_ALFAJORES:
       return <Trans>Portal Bridge</Trans>
@@ -206,6 +208,8 @@ const ExplorerLabel = ({ chainId }: { chainId: SupportedChainId }) => {
     case SupportedChainId.POLYGON:
     case SupportedChainId.POLYGON_MUMBAI:
       return <Trans>Polygonscan</Trans>
+    case SupportedChainId.BUILDBEAR:
+      return <Trans>Buildbearscan</Trans>
     case SupportedChainId.CELO:
     case SupportedChainId.CELO_ALFAJORES:
       return <Trans>Blockscout</Trans>
@@ -297,6 +301,8 @@ const getChainNameFromId = (id: string | number) => {
 const NETWORK_SELECTOR_CHAINS = [
   SupportedChainId.MAINNET,
   SupportedChainId.POLYGON,
+  SupportedChainId.BUILDBEAR,
+
   SupportedChainId.OPTIMISM,
   SupportedChainId.ARBITRUM_ONE,
   SupportedChainId.CELO,

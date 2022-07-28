@@ -7,7 +7,7 @@ export enum SupportedChainId {
   RINKEBY = 4,
   GOERLI = 5,
   KOVAN = 42,
-
+  BUILDBEAR = 8124,
   ARBITRUM_ONE = 42161,
   ARBITRUM_RINKEBY = 421611,
 
@@ -28,6 +28,7 @@ export const CHAIN_IDS_TO_NAMES = {
   [SupportedChainId.GOERLI]: 'goerli',
   [SupportedChainId.KOVAN]: 'kovan',
   [SupportedChainId.POLYGON]: 'polygon',
+  [SupportedChainId.BUILDBEAR]: 'buildbear',
   [SupportedChainId.POLYGON_MUMBAI]: 'polygon_mumbai',
   [SupportedChainId.CELO]: 'celo',
   [SupportedChainId.CELO_ALFAJORES]: 'celo_alfajores',
@@ -51,6 +52,8 @@ export function isSupportedChain(chainId: number | undefined): chainId is Suppor
 export const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS = [
   SupportedChainId.MAINNET,
   SupportedChainId.POLYGON,
+  SupportedChainId.BUILDBEAR,
+
   SupportedChainId.CELO,
   SupportedChainId.OPTIMISM,
   SupportedChainId.ARBITRUM_ONE,
@@ -61,6 +64,7 @@ export const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS = [
  */
 export const UNSUPPORTED_V2POOL_CHAIN_IDS = [
   SupportedChainId.POLYGON,
+  SupportedChainId.BUILDBEAR,
   SupportedChainId.OPTIMISM,
   SupportedChainId.ARBITRUM_ONE,
 ]
@@ -75,6 +79,8 @@ export const L1_CHAIN_IDS = [
   SupportedChainId.GOERLI,
   SupportedChainId.KOVAN,
   SupportedChainId.POLYGON,
+  SupportedChainId.BUILDBEAR,
+
   SupportedChainId.POLYGON_MUMBAI,
   SupportedChainId.CELO,
   SupportedChainId.CELO_ALFAJORES,

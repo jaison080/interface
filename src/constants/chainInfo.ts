@@ -157,6 +157,17 @@ const CHAIN_INFO: ChainInfoMap = {
     logoUrl: polygonMaticLogo,
     nativeCurrency: { name: 'Polygon Matic', symbol: 'MATIC', decimals: 18 },
   },
+  [SupportedChainId.BUILDBEAR]: {
+    networkType: NetworkType.L1,
+    blockWaitMsBeforeWarning: ms`10m`,
+    bridge: 'https://faucet.buildbear.io/loving-mccarthy-4c7bf6',
+    docs: 'https://home.buildbear.io/',
+    explorer: 'https://explorer.buildbear.io/node/loving-mccarthy-4c7bf6/',
+    infoLink: 'https://home.buildbear.io/',
+    label: 'Buildbear',
+    logoUrl: polygonMaticLogo,
+    nativeCurrency: { name: 'Polygon Matic', symbol: 'MATIC', decimals: 18 },
+  },
   [SupportedChainId.POLYGON_MUMBAI]: {
     networkType: NetworkType.L1,
     blockWaitMsBeforeWarning: ms`10m`,

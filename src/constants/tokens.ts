@@ -74,6 +74,13 @@ export const USDC_POLYGON = new Token(
   'USDC',
   'USD//C'
 )
+export const USDC_BUILDBEAR = new Token(
+  SupportedChainId.BUILDBEAR,
+  '0x2791bca1f2de4661ed88a30c99a7a9449aa84174',
+  6,
+  'USDC',
+  'USD//C'
+)
 export const USDC_POLYGON_MUMBAI = new Token(
   SupportedChainId.POLYGON_MUMBAI,
   '0xe11a86849d99f524cac3e7a0ec1241828e332c62',
@@ -130,6 +137,7 @@ export const USDC: { [chainId in SupportedChainId]: Token } = {
   [SupportedChainId.ARBITRUM_RINKEBY]: USDC_ARBITRUM_RINKEBY,
   [SupportedChainId.OPTIMISTIC_KOVAN]: USDC_OPTIMISTIC_KOVAN,
   [SupportedChainId.POLYGON]: USDC_POLYGON,
+  [SupportedChainId.BUILDBEAR]: USDC_BUILDBEAR,
   [SupportedChainId.POLYGON_MUMBAI]: USDC_POLYGON_MUMBAI,
   [SupportedChainId.CELO]: PORTAL_USDC_CELO,
   [SupportedChainId.CELO_ALFAJORES]: USDC_CELO_ALFAJORES,
@@ -145,6 +153,13 @@ export const DAI_POLYGON = new Token(
   'DAI',
   'Dai Stablecoin'
 )
+export const DAI_BUILDBEAR = new Token(
+  SupportedChainId.BUILDBEAR,
+  '0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063',
+  18,
+  'DAI',
+  'Dai Stablecoin'
+)
 export const USDT_POLYGON = new Token(
   SupportedChainId.POLYGON,
   '0xc2132d05d31c914a87c6611c10748aeb04b58e8f',
@@ -152,8 +167,23 @@ export const USDT_POLYGON = new Token(
   'USDT',
   'Tether USD'
 )
+export const USDT_BUILDBEAR = new Token(
+  SupportedChainId.BUILDBEAR,
+  '0xc2132d05d31c914a87c6611c10748aeb04b58e8f',
+  6,
+  'USDT',
+  'Tether USD'
+)
+
 export const WBTC_POLYGON = new Token(
   SupportedChainId.POLYGON,
+  '0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6',
+  8,
+  'WBTC',
+  'Wrapped BTC'
+)
+export const WBTC_BUILDBEAR = new Token(
+  SupportedChainId.BUILDBEAR,
   '0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6',
   8,
   'WBTC',
@@ -279,6 +309,13 @@ export const WETH_POLYGON = new Token(
   'WETH',
   'Wrapped Ether'
 )
+export const WETH_BUILDBEAR = new Token(
+  SupportedChainId.BUILDBEAR,
+  '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619',
+  18,
+  'WETH',
+  'Wrapped Ether'
+)
 export const CELO_CELO = new Token(
   SupportedChainId.CELO,
   '0x471EcE3750Da237f93B8E339c536989b8978a438',
@@ -381,6 +418,13 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     'WMATIC',
     'Wrapped MATIC'
   ),
+  [SupportedChainId.BUILDBEAR]: new Token(
+    SupportedChainId.BUILDBEAR,
+    '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
+    18,
+    'WMATIC',
+    'Wrapped MATIC'
+  ),
   [SupportedChainId.POLYGON_MUMBAI]: new Token(
     SupportedChainId.POLYGON_MUMBAI,
     '0x9c3C9283D3e44854697Cd22D3Faa240Cfb032889',
@@ -405,8 +449,14 @@ function getCeloNativeCurrency(chainId: number) {
   }
 }
 
-function isMatic(chainId: number): chainId is SupportedChainId.POLYGON | SupportedChainId.POLYGON_MUMBAI {
-  return chainId === SupportedChainId.POLYGON_MUMBAI || chainId === SupportedChainId.POLYGON
+function isMatic(
+  chainId: number
+): chainId is SupportedChainId.POLYGON | SupportedChainId.BUILDBEAR | SupportedChainId.POLYGON_MUMBAI {
+  return (
+    chainId === SupportedChainId.POLYGON_MUMBAI ||
+    chainId === SupportedChainId.POLYGON ||
+    chainId === SupportedChainId.BUILDBEAR
+  )
 }
 
 class MaticNativeCurrency extends NativeCurrency {
@@ -463,6 +513,7 @@ export const TOKEN_SHORTHANDS: { [shorthand: string]: { [chainId in SupportedCha
     [SupportedChainId.ARBITRUM_RINKEBY]: USDC_ARBITRUM_RINKEBY.address,
     [SupportedChainId.OPTIMISTIC_KOVAN]: USDC_OPTIMISTIC_KOVAN.address,
     [SupportedChainId.POLYGON]: USDC_POLYGON.address,
+    [SupportedChainId.BUILDBEAR]: USDC_BUILDBEAR.address,
     [SupportedChainId.POLYGON_MUMBAI]: USDC_POLYGON_MUMBAI.address,
     [SupportedChainId.CELO]: PORTAL_USDC_CELO.address,
     [SupportedChainId.CELO_ALFAJORES]: PORTAL_USDC_CELO.address,
