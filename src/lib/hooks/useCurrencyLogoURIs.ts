@@ -27,6 +27,7 @@ function chainIdToNetworkName(networkId: SupportedChainId): Network {
 function getNativeLogoURI(chainId: SupportedChainId = SupportedChainId.MAINNET): string {
   switch (chainId) {
     case SupportedChainId.POLYGON:
+    case SupportedChainId.BUILDBEAR:
     case SupportedChainId.POLYGON_MUMBAI:
       return MaticLogo
     case SupportedChainId.CELO:

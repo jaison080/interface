@@ -78,6 +78,7 @@ export interface GlobalPalette {
   networkOptimism: Color
   networkOptimismSoft: Color
   networkPolygon: Color
+  networkBuildbear: Color
   networkArbitrum: Color
   networkPolygonSoft: Color
   networkEthereumSoft: Color
@@ -161,6 +162,7 @@ export const colors: GlobalPalette = {
   networkOptimism: '#FF0420',
   networkOptimismSoft: 'rgba(255, 4, 32, 0.16)',
   networkPolygon: '#A457FF',
+  networkBuildbear: '#A457FF',
   networkArbitrum: '#28A0F0',
   networkPolygonSoft: 'rgba(164, 87, 255, 0.16)',
   networkEthereumSoft: 'rgba(98, 126, 234, 0.16)',
@@ -212,6 +214,7 @@ export interface Palette {
   chain_137: Color
   chain_42: Color
   chain_69: Color
+  chain_8127: Color
   chain_42161: Color
   chain_421611: Color
   chain_80001: Color
@@ -263,6 +266,7 @@ export const colorsLight: Palette = {
   chain_10: colors.networkOptimism,
   chain_137: colors.networkPolygon,
   chain_42: colors.networkArbitrum,
+  chain_8127: colors.networkBuildbear,
   chain_69: colors.networkOptimism,
   chain_42161: colors.networkEthereum,
   chain_421611: colors.networkEthereum,
@@ -313,6 +317,7 @@ export const colorsDark: Palette = {
   chain_5: colors.green400,
   chain_10: colors.networkOptimism,
   chain_137: colors.networkPolygon,
+  chain_8127: colors.networkBuildbear,
   chain_42: colors.networkArbitrum,
   chain_69: colors.networkEthereum,
   chain_42161: colors.networkEthereum,

@@ -29,6 +29,8 @@ function getRpcUrls(chainId: SupportedChainId): [string] {
       return ['https://rinkeby.arbitrum.io/rpc']
     case SupportedChainId.POLYGON:
       return ['https://polygon-rpc.com/']
+    case SupportedChainId.BUILDBEAR:
+      return ['https://backend.buildbear.io/node/gallant-yonath-5eedea']
     case SupportedChainId.POLYGON_MUMBAI:
       return ['https://rpc-endpoints.superfluid.dev/mumbai']
     case SupportedChainId.CELO:

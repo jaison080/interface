@@ -51,6 +51,7 @@ export default function RadialGradientByChainUpdater(): null {
         backgroundRadialGradientElement.style.background = darkMode ? optimismDarkGradient : optimismLightGradient
         break
       case SupportedChainId.POLYGON:
+      case SupportedChainId.BUILDBEAR:
       case SupportedChainId.POLYGON_MUMBAI:
         setBackground(backgroundResetStyles)
         const polygonLightGradient =

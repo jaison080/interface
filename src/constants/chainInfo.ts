@@ -160,9 +160,10 @@ const CHAIN_INFO: ChainInfoMap = {
   [SupportedChainId.BUILDBEAR]: {
     networkType: NetworkType.L1,
     blockWaitMsBeforeWarning: ms`10m`,
-    bridge: 'https://faucet.buildbear.io/loving-mccarthy-4c7bf6',
+
+    bridge: 'https://faucet.buildbear.io/gallant-yonath-5eedea',
     docs: 'https://home.buildbear.io/',
-    explorer: 'https://explorer.buildbear.io/node/loving-mccarthy-4c7bf6/',
+    explorer: 'https://explorer.buildbear.io/node/gallant-yonath-5eedea',
     infoLink: 'https://home.buildbear.io/',
     label: 'Buildbear',
     logoUrl: polygonMaticLogo,
